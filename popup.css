@@ -1,0 +1,94 @@
+
+.noselect {
+user-select: none;
+
+}
+.corp {
+  font-family: Arial, sans-serif;
+  border: 3px solid rgba(253, 253, 253, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.parametres {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20;
+  margin-bottom: 50px;
+  margin-top: 0px;
+  border: .1px solid rgb(88, 8, 201); /* bordure noire de 3px */
+  border-radius: 1px; /* bords arrondis */
+}
+.nomEtablissement {
+  cursor: pointer;
+  z-index: 200000;
+}
+
+.nomEtablissement:active::after {
+  content: 'Vous rentrerez ici le nom de votre établissement, affiché lorsque vous ouvrez l\'accordéon disponible en haut à droite. Lorsque vous êtes connectés à MBN    '; /* Ajout d'un backslash pour échapper l'apostrophe */
+  animation: fadeOut 2s ease-in-out; /* animation de disparition après 2 secondes */
+  font-size: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #333;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  border: 0px; /* bordure noire de 3px */
+  border-radius: 10px; /* bords arrondis */
+  padding: 5px 10px; /* espace intérieur */
+
+
+}
+/* Keyframes pour l'animation de la notification */
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#NEI_rectangle {
+  font-size: 18px;
+  color: #333;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  border: 3px solid rgb(6, 75, 118); /* bordure noire de 3px */
+  border-radius: 10px; /* bords arrondis */
+  padding: 5px 10px; /* espace intérieur */
+  box-sizing: border-box; /* inclure la bordure dans les dimensions */
+}
+
+/* Styles pour le rectangle transparent avec bordure cyan */
+.enregistrerButton {
+  width: 200px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.5); /* couleur de fond transparente */
+  border: 2px solid cyan; /* bordure cyan */
+  border-radius: 10px; /* bords arrondis */
+  z-index: 9998; /* assurez-vous que le rectangle est en dessous de la notification */
+  transition: transform 0.3s ease-in-out; /* animation de transition */
+}
+
+/* Animation pour le rectangle */
+.enregistrerButton.active {
+  transform: scale(1.2); /* effet de zoom lorsque le bouton est cliqué */
+}
+
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;}
+  
+/* Classe pour le bouton activé */
+.enabled {
+  background-color: limegreen;
+}
+
+/* Classe pour le bouton désactivé */
+.disabled {
+  background-color: red;
+}
